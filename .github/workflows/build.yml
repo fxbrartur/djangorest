@@ -29,7 +29,7 @@ jobs:
 
     - name: Migrate
       shell: bash
-      run: docker-compose exec web python3 manage.py migrate --noinput
+      run: docker compose exec web python manage.py migrate
 
     - name: Create user
       shell: bash
