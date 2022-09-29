@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-5*^nm#s#$73won%+fd*s(4$)%@^l4&4@&r2g=5_amfmcsu_4f%"  # os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = int(os.environ.get("DEBUG", default=0))  # True
+DEBUG = True  # int(os.environ.get("DEBUG", default=0))
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'djangorest-store.herokuapp.com']
 
@@ -77,11 +77,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "djangorest.wsgi.application"
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
@@ -130,7 +125,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-
+STATIC_URL = "/static/"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
@@ -146,4 +141,10 @@ REST_FRAMEWORK = {
     ],
 }
 
-INTERNAL_IPS = ["127.0.0.1",]
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
