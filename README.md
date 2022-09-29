@@ -1,1 +1,1 @@
-djangorest application
+djangorest app
