@@ -23,6 +23,18 @@ jobs:
       shell: bash
       run: pip install -r requirements.txt
 
+    - name: Build Docker
+      shell: bash
+      run: docker-compose up -d --build
+
+    - name: Migrate
+      shell: bash
+      run: docker-compose exec web python3 manage.py migrate
+
+    - name: Create user
+      shell: bash
+      run: docker-compose exec web bash ./user_create.sh
+
     - name: Tests
       shell: bash
       run: docker-compose exec web python3 manage.py test
