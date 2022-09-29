@@ -33,7 +33,7 @@ jobs:
 
     - name: Create user
       shell: bash
-      run: docker compose exec web bash ./user_create.sh
+      run: docker compose exec web bash ./user_creation.sh
 
     - name: Tests
       shell: bash
