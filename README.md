@@ -1,6 +1,6 @@
 # Django REST Application
 
-Django REST APP which I use as "model/template" API for store/ecommerce projects.
+Django REST APP which I use as "model/template" API for freelance store/ecommerce projects.
 
 ## Prerequisites
 
