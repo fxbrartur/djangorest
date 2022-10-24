@@ -18,7 +18,7 @@ pluggy==1.0.0
 psycopg2-binary==2.9.3
 py==1.11.0
 pycodestyle==2.9.1
-pyflakes==2.5.0
+pyflakes
 pyparsing==3.0.9
 pytest==7.1.3
 python-dateutil==2.8.2
