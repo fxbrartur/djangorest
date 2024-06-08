@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-5*^nm#s#$73won%+fd*s(4$)%@^l4&4@&r2g=5_amfmcsu_4f%"  # os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True  # int(os.environ.get("DEBUG", default=0))
+DEBUG = False  # int(os.environ.get("DEBUG", default=0))
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'djangorest-store.herokuapp.com']
 
